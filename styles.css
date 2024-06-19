@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('./—Pngtree—morandi\ gouache\ gradient\ girl\ heart_941364.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    height: auto;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+img{
+    height: 35vh;
+    width: auto;
+}
+.letter{
+    height: 85vh;
+    width: 45vw;
+    background-image: url("./image\ copy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.triangle_up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 59vh solid red;
+}
+.open_letter{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* Làm tròn các góc để tạo hình tròn */
+    background-color: #007bff; /* Màu nền của nút */
+    color: white; /* Màu chữ của nút */
+    font-size: 16px; /* Kích thước font chữ */
+    border: none; /* Loại bỏ viền */
+    cursor: pointer; /* Con trỏ chuột khi di chuột vào */
+    outline: none; /* Loại bỏ đường viền khi focus */
+}
+
+
+
+
+
+
+@media only screen and (min-width:450px) and ( max-width: 560px) {
+    .heading1{
+        font-size: 30px;
+        color: red;
+    }
+}
