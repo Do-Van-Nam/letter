@@ -1,11 +1,23 @@
+@font-face {
+    font-family: 'Selphia';
+    src: url('./VLSelphia.woff') format('woff'),
+    url('./VLSelphia.woff2') format('woff2');
+}
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Selphia';
+    color: rgb(227, 111, 130);
+    font-size: 2.5rem;
+
 }
+
 body{
     background-image: url('./—Pngtree—morandi\ gouache\ gradient\ girl\ heart_941364.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,22 +52,60 @@ img{
     border-right: 50px solid transparent;
     border-bottom: 59vh solid red;
 }
-.open_letter{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%; /* Làm tròn các góc để tạo hình tròn */
-    background-color: #007bff; /* Màu nền của nút */
-    color: white; /* Màu chữ của nút */
-    font-size: 16px; /* Kích thước font chữ */
-    border: none; /* Loại bỏ viền */
-    cursor: pointer; /* Con trỏ chuột khi di chuột vào */
-    outline: none; /* Loại bỏ đường viền khi focus */
+
+.opened_letter{
+    display: none;
 }
+.question{
+    display: flex;
 
 
-
-
-
+}
+.txt{
+    display: none;
+}
+.btn_container{
+    display: flex;
+    flex-direction: row;
+}
+#disagreebtn{
+    position: fixed;
+}
+.btn {
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    /* display: inline-block; */
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+  
+    outline: none;
+    padding: 10px 16px;
+    margin:10px 10px;
+    /* position: relative; */
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background-color: #F082AC;
+  }
+.hidden{
+    display: none;
+}
 
 @media only screen and (min-width:450px) and ( max-width: 560px) {
     .heading1{
