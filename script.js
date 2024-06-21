@@ -1,7 +1,7 @@
 const days=[' thứ 2 ',' thứ 3 ',' thứ 4 ', ' thứ 5 ',' thứ 6 ',' thứ 7 ',' chủ nhật ']
 document.addEventListener('DOMContentLoaded', (event) => {
     var dayindex = 0
-    document.getElementById('day').innerText = days[dayindex];
+    document.getElementById('day').innerText ="Tối"+ days[dayindex];
     document.getElementById('day').style.paddingLeft = '5px';  
     document.getElementById('day').style.paddingRight = '5px';  
 
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     openbtn.addEventListener('click', (event)=>{
         opened_letter.style.display=  'flex'
         document.getElementById('letter').style.display='none'
+        document.querySelector('.btn_container').style.display = 'flex'
     })
     const disagreebtn = document.getElementById('disagreebtn')
 
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         setTimeout(()=>{
         document.getElementById('sothat').style.display='none'
         document.getElementById('invitationtxt').style.display='flex'
+        document.getElementsByClassName('btn_container')[1].style.display= 'flex'
         document.getElementById('agreebtn').style.display='flex'
         disagreebtn.style.display='flex'
 
@@ -30,10 +32,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('so').style.display='flex'
         ++dayindex
         if(dayindex>6) dayindex=0
-    document.getElementById('day').innerText = days[dayindex];
+    document.getElementById('day').innerText ="Tối"+ days[dayindex];
 
     })
     disagreebtn.addEventListener('click', (event)=>{
+        disagreebtn.style.position = 'fixed'
         var top = (Math.random()*0.6+0.2)*100
         var left = (Math.random()*0.6+0.2)*100
         disagreebtn.style.top=`${top}%`
@@ -51,6 +54,10 @@ document.getElementById('ending').style.display='flex'
     document.getElementById('invitationtxt').style.display='none'
     document.getElementById('agreebtn').style.display='none'
     document.getElementById('disagreebtn').style.display='none'
-
+       document.body.style.backgroundImage = 'url("./images/bobabg.jpg")'
+      const images =  document.querySelectorAll('img')
+      images.forEach(img=>{
+        img.style.display = 'none'
+      })
     })
 });

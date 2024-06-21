@@ -8,12 +8,11 @@
     padding: 0;
     font-family: 'Selphia';
     color: rgb(227, 111, 130);
-    font-size: 2.5rem;
-
+    font-size: 2rem;
 }
 
 body{
-    background-image: url('./—Pngtree—morandi\ gouache\ gradient\ girl\ heart_941364.jpg');
+    background-image: url('./images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -21,56 +20,75 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* justify-items: center; */
     align-items: center;
+    height: 100vh;
 }
-.icon{
+/* .icon{
     height: auto;
     width: 90vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 img{
-    height: 35vh;
+    height: auto;
+    max-height: 35vh;
     width: auto;
+    max-width: 30vw;
+    /* max-width: 35vw; */
+    /* margin: 0 20%  ; */
 }
 .letter{
-    height: 85vh;
+    height: 100vh;
     width: 45vw;
-    background-image: url("./image\ copy.png");
+    /* height: 100%;
+    width: 100%; */
+    background-image: url("./images/letter.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center ;
     align-items: center;
-}
-.triangle_up {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 59vh solid red;
 }
 
 .opened_letter{
     display: none;
+    background-image: url("./images/openedletter.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center ;
+    font-size: 0.5rem;
 }
 .question{
     display: flex;
-
-
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.night{
+    display: flex;
+    padding :15px;
+}
+.day{
+    margin: 100px;
 }
 .txt{
-    display: none;
+    /* font-size: 1rem; */
 }
 .btn_container{
-    display: flex;
+    display: none;
     flex-direction: row;
+    justify-content: center ;
+    align-items: center;
 }
-#disagreebtn{
+/* #disagreebtn{
     position: fixed;
-}
+} */
 .btn {
     background-color: #EA4C89;
     border-radius: 8px;
@@ -79,10 +97,11 @@ img{
     color: #FFFFFF;
     cursor: pointer;
     /* display: inline-block; */
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px; 
-    font-weight: 500;
-    height: 40px;
+    /* font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-size: 1rem; 
+    /* font-weight: 500; */
+    height: 1.5rem;
+    width: 3.5rem;
     line-height: 20px;
     list-style: none;
   
@@ -103,10 +122,53 @@ img{
   .btn:focus {
     background-color: #F082AC;
   }
+#openbtn{
+    border-radius: 50% !important;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-top: 55%;
+} 
+#agreebtn,#disagreebtn{
+    margin: 2.5rem 2.5rem;
+} 
 .hidden{
     display: none;
 }
-
+.icon{
+    position: fixed;
+}
+.top{
+    top:10%;
+}
+.left{
+    left:10%;
+}
+.bottom{
+    bottom: 10%;
+}
+.right{
+    right:10%;
+}
+.top.left{
+    margin: 0 10% 10% 0;
+    /* margin: 10%; */
+}
+.top.right{
+    margin: 0  0 10% 10%;
+    /* margin: 10%; */
+}
+.bottom.left{
+    margin: 10%  10% 0 0;
+    /* margin: 10%; */
+}
+.bottom.right{
+    margin: 10%  0 0 10%;
+    /* margin: 10%; */
+}
+#ending,#day1{
+    color: white;
+text-align: center;
+}
 @media only screen and (min-width:450px) and ( max-width: 560px) {
     .heading1{
         font-size: 30px;
