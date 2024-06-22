@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         disagreebtn.style.position = 'fixed'
         var top = (Math.random()*0.6+0.2)*100
         var left = (Math.random()*0.6+0.2)*100
-        disagreebtn.style.top=`${top}%`
-        disagreebtn.style.left=`${left}%`
+        disagreebtn.style.top=`${top}vh`
+        disagreebtn.style.left=`${left}vw`
 
     })
     document.getElementById('agreebtn').addEventListener('click', (event)=>{
@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.getElementById('ending').style.display='flex'
        },800)
         
-    document.getElementById('day1').innerText = days[dayindex];
-    document.getElementById('day1').style.paddingLeft = '0.5rem';  
-    document.getElementById('day1').style.paddingRight = '0.5rem';  
+    document.getElementById('ending').innerText ="Hẹn cậu tối "+ days[dayindex]+" nhaaa";
+    document.getElementById('ending').style.marginLeft = '0.5rem';  
+    document.getElementById('ending').style.marginRight = '0.5rem';  
     document.getElementById('invitationtxt').style.display='none'
     document.getElementById('agreebtn').style.display='none'
     document.getElementById('disagreebtn').style.display='none'
